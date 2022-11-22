@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>minesweeper</title>
+    <style>
+        h1 {
+          font-size: 50px;
+          color: blue;
+        }
+        .game-board > div {
+        border-radius: 2px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(183, 181, 183);
+        border: 1px solid rgb(3, 3, 3);
+        }
+      .game-board {
+        display: grid;
+        grid-template-columns: repeat(var(--size), 30px);
+        grid-auto-rows: 30px;
+        font-size: 100%;
+        text-align: center;
+        font-family: san-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .square {
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        
+        
+      }
+      .square:hover{
+        background-color: pink;
+      }
+      button {
+       width: 100px;
+       height: 30px;
+       background-color:rgb(195, 195, 195);
+       color: black;
+       font-weight: bolder;
+       border-radius: 20px 20px 20px 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 id="minesweeper">MINESWEEPER</h1>
+    <h2 id="minesCount">0</h2>
+    <button id="beginner" onclick="chooseDifficulty()">BEGINNER</button>
+    <button id="intermediate" onclick="chooseDifficulty1()">INTERMEDIATE</button>
+    <button id="advanced" onclick="chooseDifficulty2()">ADVANCED</button>
+    <br>
+    <button id="start" onclick="newGame()">START</button>
+    <button id="clear" onclick="clearGame()">CLEAR</button>
+    <button id="timer">0</button>
+    <script src="script.js"></script>
+  </body>
+</html>
